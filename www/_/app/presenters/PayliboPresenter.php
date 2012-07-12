@@ -35,18 +35,24 @@ class PayliboPresenter extends BasePresenter {
           $form->addText('accountPrefix', 'accountPrefix:');
          */
         $form->addText('accountNumber', 'Číslo účtu příjemce:')                
+                ->setAttribute('required', 'required')
+                ->setAttribute('placeholder', 'povinný údaj')
 //                ->setType('number')
                 ->setRequired('Bez čísla účtu příjemce to nepůjde...')
                 ->addRule(UI\Form::NUMERIC, 'Jen čísla...')
         ;
 
         $form->addText('bankCode', 'Kód banky příjemce:')                
+                ->setAttribute('required', 'required')
+                ->setAttribute('placeholder', 'povinný údaj')
 //                ->setType('number')
                 ->setRequired('Bez kódu banky to nepůjde...')
                 ->addRule(UI\Form::NUMERIC, 'Jen čísla...')
         ;
 
         $form->addText('amount', 'Částka platby:')
+                ->setAttribute('required', 'required')
+                ->setAttribute('placeholder', 'povinný údaj')
 //                ->setType('number')
                 ->setRequired('Bez částky to nepůjde...')
                 ->addRule(UI\Form::NUMERIC, 'Jen čísla...')

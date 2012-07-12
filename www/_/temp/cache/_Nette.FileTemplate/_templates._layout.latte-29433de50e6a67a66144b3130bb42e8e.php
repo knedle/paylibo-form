@@ -1,16 +1,16 @@
-<?php //netteCache[01]000381a:2:{s:4:"time";s:21:"0.82198800 1342100547";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:59:"C:\wamp\www\playlibo-form\www\_\app\templates\@layout.latte";i:2;i:1342100505;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"eb558ae released on 2012-04-04";}}}?><?php
+<?php //netteCache[01]000381a:2:{s:4:"time";s:21:"0.54236500 1342101488";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:59:"C:\wamp\www\playlibo-form\www\_\app\templates\@layout.latte";i:2;i:1342101244;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"eb558ae released on 2012-04-04";}}}?><?php
 
 // source file: C:\wamp\www\playlibo-form\www\_\app\templates\@layout.latte
 
 ?><?php
 // prolog Nette\Latte\Macros\CoreMacros
-list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'mhzxzbqwg1')
+list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, '4r7pcx0qpk')
 ;
 // prolog Nette\Latte\Macros\UIMacros
 //
 // block head
 //
-if (!function_exists($_l->blocks['head'][] = '_lb8db3534b4c_head')) { function _lb8db3534b4c_head($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['head'][] = '_lbbeffd5e640_head')) { function _lbbeffd5e640_head($_l, $_args) { extract($_args)
 ;
 }}
 
@@ -39,11 +39,11 @@ if ($_l->extends) {
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-        <meta name="description" content="Nette Framework web application skeleton" />
+        <meta name="description" content="Formulář pro snadné získání platebního QR kodu Paylibo" />
 <?php if (isset($robots)): ?>        <meta name="robots" content="<?php echo htmlSpecialChars($robots) ?>" />
 <?php endif ?>
 
-        <title>Nette Application Skeleton</title>
+        <title>Paylibo formulář - získej snadno platební QR kód...</title>
 
         <link rel="stylesheet" media="screen,projection,tv" href="<?php echo htmlSpecialChars($basePath) ?>/css/screen.css" type="text/css" />
         <link rel="stylesheet" media="print" href="<?php echo htmlSpecialChars($basePath) ?>/css/print.css" type="text/css" />
