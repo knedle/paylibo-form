@@ -31,6 +31,7 @@ class PayliboPresenter extends BasePresenter {
         $form = new UI\Form;
 
         $form->setMethod('GET');
+        $form->getElementPrototype()->class[] = "well";        
         /*
           $form->addText('accountPrefix', 'accountPrefix:');
          */

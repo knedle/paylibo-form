@@ -1,20 +1,20 @@
-<?php //netteCache[01]000389a:2:{s:4:"time";s:21:"0.21767800 1342100613";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:67:"C:\wamp\www\playlibo-form\www\_\app\templates\Paylibo\default.latte";i:2;i:1342100610;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"eb558ae released on 2012-04-04";}}}?><?php
+<?php //netteCache[01]000389a:2:{s:4:"time";s:21:"0.45690000 1342101776";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:67:"C:\wamp\www\playlibo-form\www\_\app\templates\Paylibo\default.latte";i:2;i:1342101751;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"eb558ae released on 2012-04-04";}}}?><?php
 
 // source file: C:\wamp\www\playlibo-form\www\_\app\templates\Paylibo\default.latte
 
 ?><?php
 // prolog Nette\Latte\Macros\CoreMacros
-list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'w1blorbxla')
+list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'mxqmd3cwst')
 ;
 // prolog Nette\Latte\Macros\UIMacros
 //
 // block content
 //
-if (!function_exists($_l->blocks['content'][] = '_lb77dc9be109_content')) { function _lb77dc9be109_content($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['content'][] = '_lb22a677e2d9_content')) { function _lb22a677e2d9_content($_l, $_args) { extract($_args)
 ?><div class="row">
     <div class="span5">
         <h2>Vložte data platby</h2>
-
+        
 <?php $_ctrl = $_control->getComponent("payliboForm"); if ($_ctrl instanceof Nette\Application\UI\IRenderable) $_ctrl->validateControl(); $_ctrl->render() ?>
 
     </div>
@@ -60,7 +60,7 @@ if (!function_exists($_l->blocks['content'][] = '_lb77dc9be109_content')) { func
 //
 // block head
 //
-if (!function_exists($_l->blocks['head'][] = '_lbb4007c8bcf_head')) { function _lbb4007c8bcf_head($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['head'][] = '_lbc0ca65dfa3_head')) { function _lbc0ca65dfa3_head($_l, $_args) { extract($_args)
 ;
 }}
 
