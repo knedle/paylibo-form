@@ -1,0 +1,43 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+<div class="row">
+    <div class="span6">
+        <h2>Vložte data platby</h2>
+
+        {control payliboForm}
+
+    </div>
+    <div class="span6">
+
+        {if !empty($values)}        
+        
+            <h2>Paylibo QR kód</h2>        
+
+        {if empty($error404)}
+        <div>
+            <h3 class="">Paylibo QR kód</h3>
+            <div class="well ac"><img src="{$qrCodeUrl}" /></div>
+            <p class="ar"><a href="{$qrCodeUrl}" title="{$qrCodeUrl}">Paylibo generátor - QR code</a></p>
+            <hr />
+            <h3 class="">Paylibo řetězec</h3>
+            <pre>{$payliboString}</pre>
+            <p class="ar"><a href="{$stringUrl}" title="{$stringUrl}">Paylibo generátor - řetězec</a></p>
+            <hr />
+        </div>
+        {/if}
+
+        <h3 class="">Zaslaná data</h3>
+        <pre>{foreach $values as $key=>$value}{$key}: {$value}{sep}
+{/sep}{/foreach}</pre>        
+        {/if}
+
+    </div>
+</div>
+
+{/block}
+
+
+{block head}
+
+{/block}

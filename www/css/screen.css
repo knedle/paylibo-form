@@ -30,3 +30,15 @@ a[href^="error:"] {
 	background: red;
 	color: white;
 }
+
+.ac {
+    text-align: center !important;
+}
+
+.ar {
+    text-align: right !important;
+}
+
+table th {
+    text-align: left;
+}

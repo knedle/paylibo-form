@@ -13,6 +13,9 @@ common:
 			user:
 			password:
 
+		paylibo:
+			string: http://api.paylibo.com/paylibo/generator/czech/string
+			qrcode: http://api.paylibo.com/paylibo/generator/czech/image
 
 	php:
 		date.timezone: Europe/Prague
@@ -36,8 +39,12 @@ common:
 
 		authenticator: Authenticator( @database::table(users) )
 
-
 	factories:
+
+
+#	paylibo:
+#		string: http://api.paylibo.com/paylibo/generator/czech/string
+#		qrcode: http://api.paylibo.com/paylibo/generator/czech/image
 
 
 production < common:
