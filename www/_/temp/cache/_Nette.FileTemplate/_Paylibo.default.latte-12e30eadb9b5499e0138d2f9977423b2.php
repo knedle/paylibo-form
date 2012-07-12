@@ -1,18 +1,18 @@
-<?php //netteCache[01]000389a:2:{s:4:"time";s:21:"0.68990500 1342099421";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:67:"C:\wamp\www\playlibo-form\www\_\app\templates\Paylibo\default.latte";i:2;i:1342099416;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"eb558ae released on 2012-04-04";}}}?><?php
+<?php //netteCache[01]000389a:2:{s:4:"time";s:21:"0.21767800 1342100613";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:67:"C:\wamp\www\playlibo-form\www\_\app\templates\Paylibo\default.latte";i:2;i:1342100610;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"eb558ae released on 2012-04-04";}}}?><?php
 
 // source file: C:\wamp\www\playlibo-form\www\_\app\templates\Paylibo\default.latte
 
 ?><?php
 // prolog Nette\Latte\Macros\CoreMacros
-list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'ift8fzt07y')
+list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'w1blorbxla')
 ;
 // prolog Nette\Latte\Macros\UIMacros
 //
 // block content
 //
-if (!function_exists($_l->blocks['content'][] = '_lb0c095807e1_content')) { function _lb0c095807e1_content($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['content'][] = '_lb77dc9be109_content')) { function _lb77dc9be109_content($_l, $_args) { extract($_args)
 ?><div class="row">
-    <div class="span6">
+    <div class="span5">
         <h2>Vložte data platby</h2>
 
 <?php $_ctrl = $_control->getComponent("payliboForm"); if ($_ctrl instanceof Nette\Application\UI\IRenderable) $_ctrl->validateControl(); $_ctrl->render() ?>
@@ -26,7 +26,7 @@ if (!function_exists($_l->blocks['content'][] = '_lb0c095807e1_content')) { func
 
 <?php if (empty($error404)): ?>
         <div>
-            <h3 class="">Paylibo QR kód</h3>
+            <h3 class="">Platební QR kód</h3>
             <div class="well ac"><img src="<?php echo htmlSpecialChars($qrCodeUrl) ?>" /></div>
             <p class="ar"><a href="<?php echo htmlSpecialChars($qrCodeUrl) ?>" title="<?php echo htmlSpecialChars($qrCodeUrl) ?>">Paylibo generátor - QR code</a></p>
             <hr />
@@ -43,7 +43,14 @@ if (!function_exists($_l->blocks['content'][] = '_lb0c095807e1_content')) { func
 
 <?php endif ;$iterations++; endforeach; array_pop($_l->its); $iterator = end($_l->its) ?></pre>        
 <?php endif ?>
+&nbsp;
+    </div>
+    <div class="span1">
 
+            <a class="FlattrButton fr" style="display:none;" href="http://paylibo.3tecky.cz/"></a>
+            <noscript><a href="http://flattr.com/thing/736201/Paylibo-platebni-QR-kod-" target="_blank">
+            <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>        
+        
     </div>
 </div>
 
@@ -53,7 +60,7 @@ if (!function_exists($_l->blocks['content'][] = '_lb0c095807e1_content')) { func
 //
 // block head
 //
-if (!function_exists($_l->blocks['head'][] = '_lb2fe9cb2c23_head')) { function _lb2fe9cb2c23_head($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['head'][] = '_lbb4007c8bcf_head')) { function _lbb4007c8bcf_head($_l, $_args) { extract($_args)
 ;
 }}
 

@@ -42,3 +42,7 @@ a[href^="error:"] {
 table th {
     text-align: left;
 }
+
+.fr, .flattr-button {
+    float: right !important;    
+}

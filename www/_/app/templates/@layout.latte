@@ -29,6 +29,17 @@
 
         <link href="{$basePath}/css/bootstrap.css" rel="stylesheet">
         <script type="text/javascript" src="{$basePath}/js/bootstrap.js"></script>
+        
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            (function() {
+                var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+                t.parentNode.insertBefore(s, t);
+            })();
+        /* ]]> */</script>        
 
 	{block head}{/block}
     </head>
@@ -54,13 +65,30 @@
 
             <br /><br /><br />
 
-            <div class="hero-unit">
+            <div class="hero-unit">                
+                
                 <h1>Paylibo - platební QR kód</a></h1>
-            </div>            
+            </div>                                    
 
             <div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
 
-                {include #content}           
+                {include #content}            
+            
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'paylibo3teckycz'; // required: replace example with your forum shortname
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
 
             <div class="navbar">
                 <div class="navbar-inner">
@@ -80,7 +108,7 @@
 
                         <ul class="nav pull-right">
                             <li class="">
-                                <a href="https://github.com/knedle/playlibo-form">Paylibo form / GitHub</a>
+                                <a href="https://github.com/knedle/paylibo-form">Paylibo form / GitHub</a>
                             </li>                              
                             <li class="active">
                                 <a>by</a>

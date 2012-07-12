@@ -1,16 +1,16 @@
-<?php //netteCache[01]000381a:2:{s:4:"time";s:21:"0.57083800 1342099300";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:59:"C:\wamp\www\playlibo-form\www\_\app\templates\@layout.latte";i:2;i:1342099298;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"eb558ae released on 2012-04-04";}}}?><?php
+<?php //netteCache[01]000381a:2:{s:4:"time";s:21:"0.82198800 1342100547";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:59:"C:\wamp\www\playlibo-form\www\_\app\templates\@layout.latte";i:2;i:1342100505;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"eb558ae released on 2012-04-04";}}}?><?php
 
 // source file: C:\wamp\www\playlibo-form\www\_\app\templates\@layout.latte
 
 ?><?php
 // prolog Nette\Latte\Macros\CoreMacros
-list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'qtimv9cyvy')
+list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'mhzxzbqwg1')
 ;
 // prolog Nette\Latte\Macros\UIMacros
 //
 // block head
 //
-if (!function_exists($_l->blocks['head'][] = '_lbf458bc5230_head')) { function _lbf458bc5230_head($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['head'][] = '_lb8db3534b4c_head')) { function _lb8db3534b4c_head($_l, $_args) { extract($_args)
 ;
 }}
 
@@ -55,6 +55,17 @@ if ($_l->extends) {
 
         <link href="<?php echo htmlSpecialChars($basePath) ?>/css/bootstrap.css" rel="stylesheet" />
         <script type="text/javascript" src="<?php echo htmlSpecialChars($basePath) ?>/js/bootstrap.js"></script>
+        
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            (function() {
+                var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+                t.parentNode.insertBefore(s, t);
+            })();
+        /* ]]> */</script>        
 
 	<?php if ($_l->extends) { ob_end_clean(); return Nette\Latte\Macros\CoreMacros::includeTemplate($_l->extends, get_defined_vars(), $template)->render(); }
 call_user_func(reset($_l->blocks['head']), $_l, get_defined_vars())  ?>
@@ -81,15 +92,32 @@ call_user_func(reset($_l->blocks['head']), $_l, get_defined_vars())  ?>
 
             <br /><br /><br />
 
-            <div class="hero-unit">
+            <div class="hero-unit">                
+                
                 <h1>Paylibo - platební QR kód</a></h1>
-            </div>            
+            </div>                                    
 
 <?php $iterations = 0; foreach ($flashes as $flash): ?>            <div class="flash <?php echo htmlSpecialChars($flash->type) ?>
 "><?php echo Nette\Templating\Helpers::escapeHtml($flash->message, ENT_NOQUOTES) ?></div>
 <?php $iterations++; endforeach ?>
 
 <?php Nette\Latte\Macros\UIMacros::callBlock($_l, 'content', $template->getParameters()) ?>
+            
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'paylibo3teckycz'; // required: replace example with your forum shortname
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
 
             <div class="navbar">
                 <div class="navbar-inner">
@@ -109,7 +137,7 @@ call_user_func(reset($_l->blocks['head']), $_l, get_defined_vars())  ?>
 
                         <ul class="nav pull-right">
                             <li class="">
-                                <a href="https://github.com/knedle/playlibo-form">Paylibo form / GitHub</a>
+                                <a href="https://github.com/knedle/paylibo-form">Paylibo form / GitHub</a>
                             </li>                              
                             <li class="active">
                                 <a>by</a>

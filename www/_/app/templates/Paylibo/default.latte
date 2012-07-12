@@ -2,7 +2,7 @@
 
 {block content}
 <div class="row">
-    <div class="span6">
+    <div class="span5">
         <h2>Vložte data platby</h2>
 
         {control payliboForm}
@@ -16,7 +16,7 @@
 
         {if empty($error404)}
         <div>
-            <h3 class="">Paylibo QR kód</h3>
+            <h3 class="">Platební QR kód</h3>
             <div class="well ac"><img src="{$qrCodeUrl}" /></div>
             <p class="ar"><a href="{$qrCodeUrl}" title="{$qrCodeUrl}">Paylibo generátor - QR code</a></p>
             <hr />
@@ -31,7 +31,14 @@
         <pre>{foreach $values as $key=>$value}{$key}: {$value}{sep}
 {/sep}{/foreach}</pre>        
         {/if}
+&nbsp;
+    </div>
+    <div class="span1">
 
+            <a class="FlattrButton fr" style="display:none;" href="http://paylibo.3tecky.cz/"></a>
+            <noscript><a href="http://flattr.com/thing/736201/Paylibo-platebni-QR-kod-" target="_blank">
+            <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>        
+        
     </div>
 </div>
 
