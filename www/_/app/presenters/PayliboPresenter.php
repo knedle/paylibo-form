@@ -32,9 +32,11 @@ class PayliboPresenter extends BasePresenter {
 
         $form->setMethod('GET');
         $form->getElementPrototype()->class[] = "well";        
-        /*
-          $form->addText('accountPrefix', 'accountPrefix:');
-         */
+        
+        $form->addText('accountPrefix', 'Předčíslí účtu příjemce:')                
+                ->addCondition(UI\Form::FILLED)        
+                ->addRule(UI\Form::NUMERIC, 'Jen čísla...');
+         
         $form->addText('accountNumber', 'Číslo účtu příjemce:')                
                 ->setAttribute('required', 'required')
                 ->setAttribute('placeholder', 'povinný údaj')
