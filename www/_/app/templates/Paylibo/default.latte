@@ -12,18 +12,18 @@
 
         {if !empty($values)}        
         
-        <h2>Smartplatba QR kód</h2>        
+        <h2>QR Platba kód</h2>        
         <hr />
 
         {if empty($error404)}
         <div>
             <h3 class="">Platební QR kód</h3>
             <div class="well ac"><img src="{$qrCodeUrl}" /></div>
-            <p class="ar"><a href="{$qrCodeUrl}" title="{$qrCodeUrl}">Smartplatba generátor - QR code</a></p>
+            <p class="ar"><a href="{$qrCodeUrl}" title="{$qrCodeUrl}">QR Platba generátor - QR code</a></p>
             <hr />
-            <h3 class="">Smartplatba řetězec</h3>
+            <h3 class="">QR Platba řetězec</h3>
             <pre>{$payliboString}</pre>
-            <p class="ar"><a href="{$stringUrl}" title="{$stringUrl}">Smartplatba generátor - řetězec</a></p>
+            <p class="ar"><a href="{$stringUrl}" title="{$stringUrl}">QR Platba generátor - řetězec</a></p>
             <hr />
         </div>
         {/if}

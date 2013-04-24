@@ -17,7 +17,7 @@
         <meta name="description" content="Formulář pro snadné získání platebního QR kodu Paylibo">
         <meta name="robots" content="{$robots}" n:ifset="$robots">
 
-        <title>Paylibo formulář - získej snadno platební QR kód...</title>
+        <title>QR Platba (exPaylibo) formulář - získej snadno platební QR kód...</title>
 
         <link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/screen.css" type="text/css">
         <link rel="stylesheet" media="print" href="{$basePath}/css/print.css" type="text/css">
@@ -29,7 +29,7 @@
 
         <link href="{$basePath}/css/bootstrap.css" rel="stylesheet">
         <script type="text/javascript" src="{$basePath}/js/bootstrap.js"></script>
-        
+
         <script type="text/javascript">
         /* <![CDATA[ */
             (function() {
@@ -39,7 +39,21 @@
                 s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
                 t.parentNode.insertBefore(s, t);
             })();
-        /* ]]> */</script>        
+        /* ]]> */</script>
+
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-314942-33']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
 
 	{block head}{/block}
     </head>
@@ -58,23 +72,23 @@
                             </li>
                             <li><a href="#">šablony</a></li>
                     {* <li><a href="#">Link</a></li> *}
-                        </ul>  
+                        </ul>
                     </div>
                 </div>
-            </div>              
+            </div>
 
             <br /><br /><br />
 
-            <div class="hero-unit">                
-                
-                <h1>Smartplatba (ex Paylibo)</a></h1>
-                <h2>platební QR kód </a></h2>
-            </div>                                    
+            <div class="hero-unit">
+
+                <h1>QR Platba (ex Paylibo)</h1>
+                <h2>formulář pro získání platebního QR kódu</h2>
+            </div>
 
             <div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
 
-                {include #content}            
-            
+                {include #content}
+
             <div id="disqus_thread"></div>
             <script type="text/javascript">
                 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -94,34 +108,34 @@
             <div class="navbar">
                 <div class="navbar-inner">
                     <div class="container">
-                        
+
                         <ul class="nav">
                             <li class="">
-                                <a href="http://paylibo.com/">Smartplatba</a>
+                                <a href="http://qr-platba.cz/">QR Platba</a>
                             </li>
                             <li class="">
-                                <a href="http://paylibo.com/development/restful-api/">Smartplatba restful API specifikace</a>
+                                <a href="http://qr-platba.cz/pro-vyvojare/restful-api/">QR Platba restful API specifikace</a>
                             </li>
                             <li class="">
-                                <a href="https://github.com/smartpayment/paylibo-restapi/">Smartplatba restful API / GitHub</a>
-                            </li>                                                        
-                        </ul>  
+                                <a href="https://github.com/spayd/paylibo-restapi/">QR Platba restful API / GitHub</a>
+                            </li>
+                        </ul>
 
                         <ul class="nav pull-right">
                             <li class="">
                                 <a href="https://github.com/knedle/paylibo-form">Paylibo form / GitHub</a>
-                            </li>                              
+                            </li>
                             <li class="active">
                                 <a>by</a>
-                            </li>                                                                   
+                            </li>
                             <li class="">
                                 <a href="https://twitter.com/3knedle">@3knedle</a>
-                            </li>                                                         
-                        </ul>  
-                        
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
-            </div>             
+            </div>
         </div>
 
     </body>

@@ -25,19 +25,19 @@ class PayliboPresenter extends BasePresenter {
 
     /**
      *
-     * @return \Nette\Application\UI\Form 
+     * @return \Nette\Application\UI\Form
      */
     protected function createComponentPayliboForm() {
         $form = new UI\Form;
 
         $form->setMethod('GET');
-        $form->getElementPrototype()->class[] = "well";        
-        
-        $form->addText('accountPrefix', 'Předčíslí účtu příjemce:')                
-                ->addCondition(UI\Form::FILLED)        
+        $form->getElementPrototype()->class[] = "well";
+
+        $form->addText('accountPrefix', 'Předčíslí účtu příjemce:')
+                ->addCondition(UI\Form::FILLED)
                 ->addRule(UI\Form::NUMERIC, 'Jen čísla...');
-         
-        $form->addText('accountNumber', 'Číslo účtu příjemce:')                
+
+        $form->addText('accountNumber', 'Číslo účtu příjemce:')
                 ->setAttribute('required', 'required')
                 ->setAttribute('placeholder', 'povinný údaj')
 //                ->setType('number')
@@ -45,7 +45,7 @@ class PayliboPresenter extends BasePresenter {
                 ->addRule(UI\Form::NUMERIC, 'Jen čísla...')
         ;
 
-        $form->addText('bankCode', 'Kód banky příjemce:')                
+        $form->addText('bankCode', 'Kód banky příjemce:')
                 ->setAttribute('required', 'required')
                 ->setAttribute('placeholder', 'povinný údaj')
 //                ->setType('number')
@@ -83,7 +83,7 @@ class PayliboPresenter extends BasePresenter {
         $form->addText('identifier', 'Interní ID platby:');
 
         $form->addText('date', 'Datum platby:')
-                ->setType('date')                                
+                ->setType('date')
                 ;
 
         $form->addText('message', 'Zpráva pro příjemce:');
@@ -96,7 +96,7 @@ class PayliboPresenter extends BasePresenter {
 
     /**
      *
-     * @param \Nette\Application\UI\Form $form 
+     * @param \Nette\Application\UI\Form $form
      */
     public function payliboFormSubmitted($form) {
 
@@ -109,27 +109,27 @@ class PayliboPresenter extends BasePresenter {
                 unset($values[$key]);
             }
         }
-        
+
         if (!empty($values['date'])) {
             $date = new DateTime($values['date']);
             $values['date'] = $date->format("Y-m-d");
         }
 
-        // ziskat QR code 
+        // ziskat QR code
         // precteme cesty co jsou v config.neon - je nejaka rychlejsi cesta?
         $parameters = $this->getContext()->getParameters();
         $stringUrl = $parameters['paylibo']['string'] . '?' . http_build_query($values);
         $qrCodeUrl = $parameters['paylibo']['qrcode'] . '?' . http_build_query($values);
 
         $headers = get_headers($stringUrl);
-        
+
         $this->template->values = $values;
 
         if (preg_match("/200 OK/", $headers[0])) {
 
             $payliboString = file_get_contents($stringUrl);
 
-            
+
             $this->template->stringUrl = $stringUrl;
             $this->template->payliboString = $payliboString;
             $this->template->qrCodeUrl = $qrCodeUrl;
