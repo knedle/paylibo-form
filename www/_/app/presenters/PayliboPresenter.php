@@ -58,7 +58,7 @@ class PayliboPresenter extends BasePresenter {
                 ->setAttribute('placeholder', 'povinný údaj')
 //                ->setType('number')
                 ->setRequired('Bez částky to nepůjde...')
-                ->addRule(UI\Form::NUMERIC, 'Jen čísla...')
+                ->addRule(UI\Form::FLOAT, 'Jen čísla...')
         ;
 
         $form->addText('currency', 'Měna platby:')
