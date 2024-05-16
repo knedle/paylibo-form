@@ -125,7 +125,7 @@ class PayliboPresenter extends BasePresenter {
 
         $this->template->values = $values;
 
-        if (preg_match("/200 OK/", $headers[0])) {
+        if (preg_match("/200/", $headers[0])) {
 
             $payliboString = file_get_contents($stringUrl);
 
@@ -135,7 +135,9 @@ class PayliboPresenter extends BasePresenter {
             $this->template->qrCodeUrl = $qrCodeUrl;
         } else {
             $this->template->error404 = true;
-            $this->flashMessage('Generátor vrátil chybu - špatná vstuní data?');
+            $this->flashMessage('Generátor vrátil chybu - špatná vstupní data?');
+            $this->flashMessage('Volané url: '. $stringUrl);
+            //$this->flashMessage('hlavicky: '. json_encode($headers));            
         }
 
 
