@@ -90,7 +90,7 @@ class PayliboPresenter extends BasePresenter {
 
         $form->addSubmit('getCode', 'získej platební QR kód');
 
-        $form->onSuccess[] = callback($this, 'payliboFormSubmitted');
+        $form->onSuccess[] = [$this, 'payliboFormSubmitted'];
         return $form;
     }
 
@@ -117,7 +117,7 @@ class PayliboPresenter extends BasePresenter {
 
         // ziskat QR code
         // precteme cesty co jsou v config.neon - je nejaka rychlejsi cesta?
-        $parameters = $this->getContext()->getParameters();
+        $parameters = $this->context->getParameters();
         $stringUrl = $parameters['paylibo']['string'] . '?' . http_build_query($values);
         $qrCodeUrl = $parameters['paylibo']['qrcode'] . '?' . http_build_query($values);
 

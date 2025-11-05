@@ -1,0 +1,12 @@
+{
+    "name": "paylibo/form",
+    "description": "Paylibo form application",
+    "require": {
+        "php": ">=7.0",
+        "nette/nette": "^2.4"
+    },
+    "config": {
+        "vendor-dir": "www/_/libs-composer"
+    },
+    "minimum-stability": "stable"
+}

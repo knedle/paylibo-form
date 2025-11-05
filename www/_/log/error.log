@@ -1,0 +1,2 @@
+[2025-11-05 21-29-55] PHP Deprecated: Constant E_STRICT is deprecated in /home/pavel-zehnula/development/paylibo-form/www/_/libs-composer/tracy/tracy/src/Tracy/Helpers.php:152  @  CLI (PID: 332857): 'Standard input code' 
+[2025-11-05 21-29-55] PHP Deprecated: Tracy\Dumper::encodeString(): Implicitly marking parameter $maxLength as nullable is deprecated, the explicit nullable type must be used instead in /home/pavel-zehnula/development/paylibo-form/www/_/libs-composer/tracy/tracy/src/Tracy/Dumper/Dumper.php:520  @  CLI (PID: 332857): 'Standard input code' 

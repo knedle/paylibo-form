@@ -1,5 +1,8 @@
 <?php
 
+// Suppress deprecation warnings for PHP 8.x compatibility
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
+
 // absolute filesystem path to this web root
 define('WWW_DIR', __DIR__);
 

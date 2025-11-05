@@ -9,16 +9,18 @@ use Nette\Security as NS;
  * @author     John Doe
  * @package    MyApplication
  */
-class Authenticator extends Nette\Object implements NS\IAuthenticator
+class Authenticator implements NS\IAuthenticator
 {
-	/** @var Nette\Database\Table\Selection */
-	private $users;
+	use Nette\SmartObject;
+
+	/** @var Nette\Database\Context */
+	private $database;
 
 
 
-	public function __construct(Nette\Database\Table\Selection $users)
+	public function __construct(Nette\Database\Context $database)
 	{
-		$this->users = $users;
+		$this->database = $database;
 	}
 
 
@@ -32,7 +34,7 @@ class Authenticator extends Nette\Object implements NS\IAuthenticator
 	public function authenticate(array $credentials)
 	{
 		list($username, $password) = $credentials;
-		$row = $this->users->where('username', $username)->fetch();
+		$row = $this->database->table('users')->where('username', $username)->fetch();
 
 		if (!$row) {
 			throw new NS\AuthenticationException("User '$username' not found.", self::IDENTITY_NOT_FOUND);

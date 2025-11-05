@@ -31,7 +31,7 @@ class SignPresenter extends BasePresenter
 
 		$form->addSubmit('send', 'Sign in');
 
-		$form->onSuccess[] = callback($this, 'signInFormSubmitted');
+		$form->onSuccess[] = [$this, 'signInFormSubmitted'];
 		return $form;
 	}
 

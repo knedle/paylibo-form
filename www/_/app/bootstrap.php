@@ -5,23 +5,26 @@
  */
 use Nette\Application\Routers\Route;
 
+// Load Composer autoloader
+require __DIR__ . '/../../vendor/autoload.php';
 
-// Load Nette Framework
-require LIBS_DIR . '/Nette/loader.php';
-
+// Configure Tracy Logger manually for PHP 8.4 compatibility
+// (Tracy Bar is not compatible with PHP 8.4, but we need Logger for error handling)
+Tracy\Debugger::$logDirectory = __DIR__ . '/../log';
+Tracy\Debugger::$strictMode = false;
 
 // Configure application
-$configurator = new Nette\Config\Configurator;
+$configurator = new Nette\Configurator;
 
-// Enable Nette Debugger for error visualisation & logging
-//$configurator->setDebugMode($configurator::AUTO);
-$configurator->enableDebugger(__DIR__ . '/../log');
+// Disable Nette Debugger for PHP 8.x compatibility (Tracy 2.6 is not compatible with PHP 8.4)
+$configurator->setDebugMode(false);
+// Don't use Tracy debugger - not compatible with PHP 8.4
+// $configurator->enableDebugger(__DIR__ . '/../log');
 
 // Enable RobotLoader - this will load all classes automatically
 $configurator->setTempDirectory(__DIR__ . '/../temp');
 $configurator->createRobotLoader()
 	->addDirectory(APP_DIR)
-	->addDirectory(LIBS_DIR)
 	->register();
 
 // Create Dependency Injection container from config.neon file
