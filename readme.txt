@@ -3,7 +3,7 @@ QRPlatba form
 https://qrplatba.3tecky.cz
 
 by @3knedle
-https://blog.3tecky.cz
+https://3tecky.cz
 
 formulář usnadnující získání platebního kódu Paylibo příkazu pro ČR
 http://paylibo.com/development/restful-api/#generator-czech-image
